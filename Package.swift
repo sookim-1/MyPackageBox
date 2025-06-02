@@ -13,7 +13,10 @@ let package = Package(
             targets: ["CommonExtensions"]),
         .library(
             name: "CommonExtensions",
-            targets: ["CommonExtensions"])
+            targets: ["CommonExtensions"]),
+        .library(
+            name: "AnalyticsTool",
+            targets: ["AnalyticsTool"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -22,5 +25,7 @@ let package = Package(
             name: "MyPackageBox"),
         .target(
             name: "CommonExtensions"),
+        .target(
+            name: "AnalyticsTool"),
     ]
 )
