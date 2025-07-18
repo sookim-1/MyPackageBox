@@ -4,28 +4,25 @@
 import PackageDescription
 
 let package = Package(
-    name: "MyPackageBox",
+    name: "MySwiftPackage",
     platforms: [.iOS(.v15)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "MyPackageBox",
-            targets: ["CommonExtensions"]),
         .library(
             name: "CommonExtensions",
             targets: ["CommonExtensions"]),
         .library(
-            name: "AnalyticsTool",
-            targets: ["AnalyticsTool"])
+            name: "KAnalyticsManager",
+            targets: ["KAnalyticsManager"]),
+        .library(
+            name: "KImageLoader",
+            targets: ["KImageLoader"])
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "MyPackageBox"),
         .target(
             name: "CommonExtensions"),
         .target(
-            name: "AnalyticsTool"),
+            name: "KAnalyticsManager"),
+        .target(
+            name: "KImageLoader"),
     ]
 )
